@@ -1,0 +1,21 @@
+[GLOBAL]
+dataset = CIFAR10
+latent = 10
+D1_frac = 0.8
+D2_trainfrac = 0.8
+D2_valfrac = 0.1
+clusters = True
+
+[AUTOENCODER]
+lr = 0.001
+loss = MSE
+optim = Adam
+epochs = 4
+recons = 10
+
+[CLASSIFIER]
+lr = 0.001
+loss = CE
+optim = Adam
+epochs = 10
+freeze = False
